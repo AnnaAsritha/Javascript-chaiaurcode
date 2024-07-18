@@ -18,6 +18,8 @@ const gameName = new String('candycrush');//other way to declare the string
 
 // console.log(gameName.indexOf('h')); // to find the charecter index
 
+
+
 const newGame =  gameName.slice(-8,2);// we can even take negatives in slice
 
 console.log(newGame);
