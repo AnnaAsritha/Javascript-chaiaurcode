@@ -1,0 +1,140 @@
+java script execution context
+
+java script run the program in two phases
+
+
+1)Global execution context --> this object is Global
+
+this object in console gives the window object
+
+
+ 2)functional execution context --> 
+
+ 3) eval execution context -- this is not used more 
+
+he phases
+
+   1) memory (creation phase) --> the variable which you are declared for the space is allocated
+
+
+    2) execution phase --> this is for mathematical phase
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    example
+
+    let var1 =10;
+    let var2 =2;
+    function add(num1,num2){
+      let total = num1+num2;
+        return total;
+    }
+
+let result1 = add(var1,var2);
+let result2 = add(3,5);
+
+here first the phase will be
+
+1 ---> Global execution -- this
+
+2 ---> memory phase
+  var1 = undefined
+  var2 = undefined
+  add = funtion defination
+  result1 = undefined
+  result2 = undefined
+
+3 -----> execution phase
+  var1 = 10
+  var2 = 2
+  result1 = 12
+  next in function we dont have anything to execution just we have defination
+  addnum == newvariable environment + execution thread  // once the execution part is done this will be deleted
+            |
+            |
+            |
+            |
+            |
+            V
+whn ever the function will be called that many time memoryphase and execution phase will be called
+4 -----> result1
+  2 ---> memory phase
+  var1 = undefined
+  var2 = undefined
+  total = undefined
+  3 -----> execution phase
+  num1 = 10
+  num2 = 2
+  total = 12
+
+
+5 -----> return
+  next the total will ne return from the Global executio which is step 1
+
+
+
+5------> for result2 again the memory phase and execution pahse will be done
+
+ addnum == newvariable environment + execution thread  // once the execution part is done this will be deleted
+            |
+            |
+            |first new variable env and thread will be created from that we will create result2
+            |
+            |
+            V
+for this result2 again we will create memory phase and execution phase
+
+
+ 1-----> result1
+  2 ---> memory phase
+  var1 = undefined
+  var2 = undefined
+  total = undefined
+  3 -----> execution phase
+  num1 = 3
+  num2 = 5
+  total = 8
+
+  again this total will go to global execution  context and returns the total
+
+
+
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  There is other execution stack execution
+
+                  |                       |
+                  |                       |
+                  |                       |
+                  |                       |
+                  |                       |
+                  |                       |
+                  |     add()             |
+                  |_______________________|
+                  |   Global execution    |
+                  |_______________________|
+add()                                             add()
+this add function when there is execution then it goes into stack the total comes out
+
+
+
+if there is more that 1 function then
+
+                  |                       |
+                  |                       |
+                  |                       |       here the stack flow will work
+                  |                       |        last in first out 
+                  |                       |       so three function will come out 
+                  |        three()        |
+                  |      tw0()            |
+                  |     one()             |
+                  |_______________________|
+                  |   Global execution    |
+                  |_______________________| 
+one(),two(),three()
+
+
+// few truthy stattement
+
+false ==0 --> true
+
+0== '' --> trues
+false  == ' ' --> true
