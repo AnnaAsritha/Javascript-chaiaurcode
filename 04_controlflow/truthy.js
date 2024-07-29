@@ -27,7 +27,7 @@ if(Object.keys(emptyObject).length===0){
 }
 
 // Nullish Coalescing Operator (??): null undefined
-
+// if the value first vaule is null or undefined then it will give other vlaue
 let val1;
 // val1 = 5 ?? 10
 // val1 = null ?? 10
@@ -37,4 +37,12 @@ val1 = null ?? 10 ?? 20
 
 console.log(val1);
 
+//ternary operator
+//condition ? true:false
+
+const price = 230;
+
+price>=300 ? console.log("graater than 300") : console.log('jetsrr');
+
+// console.log(price)
 
