@@ -9,7 +9,7 @@ for (const num of arr) {
 const string = 'asritha'
 
 for (const alpha of string) {
-    // console.log(alpha);
+    console.log(alpha);
 }
 
 
@@ -28,4 +28,13 @@ map.set("IN","India");// again it will enter india because maps gives only uniqu
 
 for (const [key,value] of map) {
     console.log(key ,":-", value);
+}
+
+const myobj = {
+    "game1": "checss",
+    "game2":"carrom",
+}
+
+for (const key of myobj){
+    console.log(key);
 }
